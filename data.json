@@ -1,0 +1,24 @@
+[
+  { 
+    "id": 1, 
+    "name": "Item 1", 
+    "categories": ["App", "Group"], 
+    "description": "This is the description for Item 1." 
+  },
+  { "id": 2, 
+    "name": "Item 2", 
+    "categories": ["App"], 
+    "description": "This is the description for Item 2."
+  },
+  { "id": 3, 
+    "name": "Item 3", 
+    "categories": ["Website", "Group"], 
+    "description": "This is the description for Item 3." 
+  },
+  { "id": 4, 
+    "name": "Item 4", 
+    "categories": ["Category 3"], 
+    "description": "This is the description for Item 4." 
+  }
+]
+
