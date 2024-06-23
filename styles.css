@@ -285,6 +285,10 @@ footer > .top {
     font-size: 50px;
   }
 
+  .item-container {
+    height: 67px;
+  }
+
   .active > .top > .right > .back {
     padding: 0px 0px;
   }
@@ -313,6 +317,10 @@ footer > .top {
 
   #itemList > div > li {
     font-size: 40px;
+  }
+
+  .item-container {
+    height: 53px;
   }
 
   .active > .top > .right > .back > svg{
