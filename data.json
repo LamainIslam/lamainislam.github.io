@@ -1,12 +1,28 @@
 [
   { 
     "id": 1, 
-    "name": "Item 1", 
+    "name": "Pet Mind", 
     "categories": ["App", "Group"], 
-    "description": "This is the description for Item 1." 
+    "description": "This is the description for Item 1." ,
+    "image": "images/petmind1.png"
   },
   { "id": 2, 
-    "name": "Item 2", 
+    "name": "Weather App", 
+    "categories": ["App"], 
+    "description": "This is the description for Item 2."
+  },
+  { "id": 3, 
+    "name": "Item 3", 
+    "categories": ["Website", "Group"], 
+    "description": "This is the description for Item 3." 
+  },
+  { "id": 4, 
+    "name": "Item 4", 
+    "categories": ["Game", "Solo"], 
+    "description": "This is the description for Item 4." 
+  },
+  { "id": 2, 
+    "name": "Weather App", 
     "categories": ["App"], 
     "description": "This is the description for Item 2."
   },

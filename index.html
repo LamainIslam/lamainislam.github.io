@@ -3,15 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filtered List</title>
+    <title>Lamain Islam</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=panchang@200,300,400,500,600,700,800,1&f[]=outfit@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <input type="text" id="searchBar" placeholder="Search...">
-        <div id="categoryButtons"></div>
+        <div class="search-and-filter">
+            <div class="search">
+                <img class="search-icon" src="search.svg" alt="search icon">
+                <input type="text" id="searchBar" placeholder="Search...">
+                <select id="categoryDropdown">
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+        </div>
+        <div id="loader">Loading...</div>
         <ul id="itemList"></ul>
     </div>
+    <footer>
+        <div class="top">
+            <div class="left">
+                <h1>Lamain Islam</h1>
+                <p>
+                    <span class="num-holder">
+                        <span class="num1">01</span>
+                        <span class="num2">01</span>
+                    </span>
+                    <span class="overlay">about</span>
+                </p>
+            </div>
+            <div class="right">
+                <p>
+                    <span class="num-holder">
+                        <span class="num1">02</span>
+                        <span class="num2">02</span>
+                    </span>
+                    <a href="">email</a>
+                </p>
+                <p>
+                    <span class="num-holder">
+                        <span class="num1">03</span>
+                        <span class="num2">03</span>
+                    </span>
+                    <a href="">linkedin</a>
+                </p>
+                <p>
+                    <span class="num-holder">
+                        <span class="num1">04</span>
+                        <span class="num2">04</span>
+                    </span>
+                    <a href="">github</a>
+                </p>
+                <p>
+                    <span class="num-holder">
+                        <span class="num1">05</span>
+                        <span class="num2">05</span>
+                    </span>
+                    <a href="">codepen</a>
+                </p>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>©2024 Lamain Islam All Rights Reserved</p>
+            <p>Designed by Lamain Islam</p>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
