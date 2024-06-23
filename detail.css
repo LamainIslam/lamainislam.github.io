@@ -20,7 +20,7 @@ p{
 img{
   width: 100%;
 }
-a>img{
+a>svg{
   width: 50px;
   position: absolute;
   top: 20px;
