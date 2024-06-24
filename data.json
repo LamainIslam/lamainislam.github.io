@@ -9,26 +9,26 @@
   { 
     "id": 2, 
     "name": "Weather App", 
-    "categories": ["App, Group"], 
+    "categories": ["App", "Group"], 
     "description": "This project is a prototype for a specialized weather app designed specifically for climbers, providing crucial real-time, location-based weather updates to ensure safe and optimal climbing experiences. The project focuses on delivering accurate and reliable weather information tailored to the needs of climbers.",
     "image": "images/weatherApp.png"
   },
   {
     "id": 3,
     "name": "Bank App",
-    "categories": ["App, Solo"],
+    "categories": ["App", "Solo"],
     "description": "This is a bank app that allows users to manage their accounts, transactions, and more. It provides an intuitive and user-friendly interface for managing their banking needs.",
     "image": "images/bankApp.png"
   },
   { "id": 4,
     "name": "Ospuze",
-    "categories": ["Website, solo"],
+    "categories": ["Website", "solo"],
     "description": "Ospuze is a virtul brand in a game called 'The Finals'. ",
     "image": "images/ospuze.png"
   },
   { "id": 10,
     "name": "This Website",
-    "categories": ["Website, solo"],
+    "categories": ["Website", "solo"],
     "description": "This is my personal website. I am currently working on it.",
     "image": "images/xyz.png"
   }    
