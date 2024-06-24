@@ -15,10 +15,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (item) {
             itemDetail.innerHTML = `
-                <img src="${item.image}">
+                <img src="${item.image}" alt="${item.name}">
                 <h1>${item.name}</h1>
                 <p>Categories: ${item.categories.join(', ')}</p>
-                <p>${item.description}</p>
+                <div>${item.description}</div>
             `;
         } else {
             itemDetail.innerHTML = '<p>Item not found</p>';
