@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         } else {
             itemDetail.innerHTML = '<p>Item not found</p>';
         }
-    } catch (error) {
+    } 
+    catch (error) {
         console.error('Error fetching the data:', error);
         itemDetail.innerHTML = '<p>Error loading item details</p>';
     }
