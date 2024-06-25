@@ -35,6 +35,12 @@
     "image": "images/muted_theme.png"
   },
   {
+    "id": 6,
+    "name": "Chat App",
+    "categories": ["App", "Solo"],
+    "description":""
+  },
+  {
     "id": 10,
     "name": "This Website",
     "categories": ["Website", "Solo"],

@@ -135,6 +135,11 @@ circle {
   transform: translateY(-100%);
 }
 
+.svg-top-align {
+  vertical-align: text-top;
+  padding-top: 20px ;
+}
+
 #loader {
   display: none;
   font-size: 24px;
@@ -161,6 +166,12 @@ footer > .bottom {
 footer > .top {
   display: flex;
   justify-content: space-between;
+  align-items: end;
+}
+
+.right{
+  display: flex;
+  flex-direction: column;
   align-items: end;
 }
 
@@ -192,13 +203,28 @@ footer > .top {
 }
 
 .left > p, .right > a {
-  font-family: 'Outfit', sans-serif;text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  text-decoration: none;
   color: var(--color-1);
   font-size: 16px;
   display: flex;
   align-items: center;
   gap: 10px;
   cursor: pointer;
+}
+
+.left > p::after, .right > a::after{
+  content: '';
+  display: block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #00000000;
+}
+.right > a::after{ position: absolute; right: 10px; }
+
+.left > p:hover::after, .right > a:hover::after{
+  background-color: var(--color-1);
 }
 
 .left > p > .overlay, .right > a > p {
@@ -289,6 +315,18 @@ footer > .top {
   color: var(--color-3) !important;
 }
 
+.active > .top> .left > p:hover::after, .active > .top> .right > a:hover::after{
+  background-color: var(--color-3);
+}
+
+.active > .top > .left > a > h1 > span > span > span > .other-svg > rect{
+  fill: var(--color-3);
+}
+
+.active > .top > .right > .back::after{
+  display: none;
+} 
+
 .active > .about-me {
   display: block;
 }
@@ -316,8 +354,18 @@ footer > .top {
     height: 67px;
   }
 
+  .svg-top-align {
+    transform: scale(0.5) !important;
+    padding-top: 5px;
+  }
+
   .left > a > h1 > span {
     height: 42px;
+  }
+
+  .other-svg{
+    transform: scale(0.7) !important;
+    padding-top: 5px;
   }
 
   .num-holder {
@@ -358,8 +406,14 @@ footer > .top {
     height: 53px;
   }
 
+  .svg-top-align { display: none;}
+
   .left > a > h1 > span {
     height: 37px;
+  }
+
+  .other-svg{
+    display: none;
   }
 
   .num-holder {

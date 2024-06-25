@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (item) {
             itemDetail.innerHTML = `
-                <img src="${item.image}" alt="${item.name}">
+                <img src="${item.image}" alt="Image of ${item.name}">
                 <h1>${item.name}</h1>
                 <p>Categories: ${item.categories.join(', ')}</p>
                 <div>${item.description}</div>

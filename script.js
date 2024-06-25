@@ -36,6 +36,13 @@ document.addEventListener('DOMContentLoaded', () => {
         filteredData.forEach(item => {
             const parentDiv = document.createElement('div');
             parentDiv.className = 'item-container';
+            
+            const svgString = `
+            <svg class="svg-top-align" width="50" height="50" viewBox="0 0 63 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="48.4258" width="20" height="64.8449" transform="rotate(45 48.4258 0)" fill="#FF4400"/>
+                <rect x="43" width="20" height="60" fill="#FF4400"/>
+                <rect y="20" width="20" height="60" transform="rotate(-90 0 20)" fill="#FF4400"/>
+            </svg>`;
 
             const li1 = document.createElement('li');
             li1.textContent = `${item.name}`;
@@ -45,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const li2 = document.createElement('li');
-            li2.textContent = `${item.name}`;
+            li2.innerHTML = `${item.name} ${svgString}`; // Set the innerHTML with the text and SVG
             li2.className = 'item-front';
             li2.addEventListener('click', () => {
                 window.location.href = `detail.html?id=${item.id}`;
-            });
+            }); 
 
             parentDiv.appendChild(li1);
             parentDiv.appendChild(li2);
