@@ -3,7 +3,7 @@
     "id": 1,
     "name": "Pet Mind",
     "categories": ["App", "Group"],
-    "description": "<p>PetMind is an innovative web platform designed to connect pet owners with reliable and trusted pet minders in their locality. This project aimed to simplify the process of finding and booking professional pet care services, ensuring peace of mind for pet owners and high-quality care for pets.</p><p>Key Contributions:</p><p>Search Functionality for the Prototype:</p><ul><li>Designed and implemented the core search feature, enabling users to find pet minders based on location, availability, and services offered.</li><li>Integrated advanced filtering options to enhance user experience and streamline the search process.</li></ul><p>Research and Planning:</p><ul><li>Conducted comprehensive research to identify user needs and market gaps, ensuring the platform meets the demands of both pet owners and pet minders.</li><li>Developed detailed user personas and scenarios to guide the design and functionality of the website.</li></ul><p>UML Diagrams and System Design:</p><ul><li>Created extensive UML diagrams including use case diagrams, class diagrams, and sequence diagrams to map out the system architecture.</li><li>Collaborated with the team to translate these diagrams into a functional and efficient website structure.</li></ul>",
+    "description": "<p>PetMind is an innovative web platform designed to connect pet owners with reliable and trusted pet minders in their locality. This project aimed to simplify the process of finding and booking professional pet care services, ensuring peace of mind for pet owners and high-quality care for pets.</p><p>Key Contributions:</p><p>Search Functionality for the Prototype:</p><ul><li>Designed and implemented the core search feature, enabling users to find pet minders based on location, availability, and services offered.</li><li>Integrated advanced filtering options to enhance user experience and streamline the search process.</li></ul><p>Research and Planning:</p><ul><li>Conducted comprehensive research to identify user needs and market gaps, ensuring the platform meets the demands of both pet owners and pet minders.</li><li>Developed detailed user personas and scenarios to guide the design and functionality of the website.</li></ul><p>UML Diagrams and System Design:</p><ul><li>Created extensive UML diagrams including use case diagrams, class diagrams, and sequence diagrams to map out the system architecture.</li><li>Collaborated with the team to translate these diagrams into a functional and efficient website structure.</li></ul> <img src='images/petmind.png'> <img src='images/petmind2.png'>",
     "image": "images/petmind1.png"
   },
   {
@@ -15,17 +15,17 @@
   },
   {
     "id": 3,
-    "name": "Bank App",
-    "categories": ["App", "Solo"],
-    "description": "<p>This bank app allows users to manage their accounts, transactions, and more with ease.</p><p>Key Features:</p><ul><li>Intuitive and user-friendly interface.</li><li>Comprehensive account management.</li><li>Secure transaction handling.</li></ul><p>This app aims to provide a seamless banking experience, making financial management straightforward and efficient.</p>",
-    "image": "images/bankApp.png"
+    "name": "Ospuze",
+    "categories": ["Website", "Solo"],
+    "description": "<p>Ospuze is a virtual brand in the game 'The Finals'. I created a 3D website for this in-game brand using Spline.</p><p>Key Elements:</p><ul><li>Immersive virtual brand experience.</li><li>Integrated within the gaming environment.</li><li>Developed using Spline to create engaging 3D visuals and interactions.</li></ul><p>This project explores the creation and integration of a fictional brand within a popular game, enhancing the in-game experience through a dynamic and interactive 3D website.</p> <img src='images/ospuze1.png'> <img src='images/ospuze2.png'>",
+    "image": "images/ospuze.png"
   },
   {
     "id": 4,
-    "name": "Ospuze",
-    "categories": ["Website", "Solo"],
-    "description": "<p>Ospuze is a virtual brand in the game 'The Finals'. I created a 3D website for this in-game brand using Spline.</p><p>Key Elements:</p><ul><li>Immersive virtual brand experience.</li><li>Integrated within the gaming environment.</li><li>Developed using Spline to create engaging 3D visuals and interactions.</li></ul><p>This project explores the creation and integration of a fictional brand within a popular game, enhancing the in-game experience through a dynamic and interactive 3D website.</p>",
-    "image": "images/ospuze.png"
+    "name": "Chat App",
+    "categories": ["App", "Solo"],
+    "description":"<p>ChatMate is an advanced chat application built with React, designed to deliver a seamless and modern communication experience. This project focuses on providing real-time messaging, user authentication, and an intuitive user interface for effortless interaction.</p><p>Key Features:</p><p>Real-Time Messaging:</p><ul><li>Messages are delivered instantly and reliably.</li></ul><p>User Authentication:</p><ul><li>Created a secure authentication system to protect user data and ensure privacy.</li><li>Incorporated user registration and login functionalities.</li></ul><p>Responsive Design:</p><ul><li>Designed a fully responsive interface to provide a consistent user experience across all devices, including desktops, tablets, and smartphones.</li></ul><p>Group Chats and Media Sharing:</p><ul><li>Enabled users to create and manage group chats, fostering collaboration and social interaction.</li><li>Added media sharing capabilities, allowing users to send photos, videos, and files within chats.</li></ul>",
+    "image": "images/chatApp.png"
   },
   {
     "id": 5,
@@ -36,16 +36,10 @@
   },
   {
     "id": 6,
-    "name": "Chat App",
-    "categories": ["App", "Solo"],
-    "description":""
-  },
-  {
-    "id": 10,
     "name": "This Website",
     "categories": ["Website", "Solo"],
-    "description": "<p>This is my personal website.</p><p>Current Work:</p><ul><li>Developing new features.</li><li>Enhancing user experience.</li><li>Implementing responsive design.</li></ul><p>I am continuously working on improving this website to better showcase my portfolio and projects.</p>",
-    "image": "images/xyz.png"
+    "description": "<p>This is my personal website.</p><p>This website was designed using Figma. Developed using HTML, CSS, and JavaScript in Visual Studio Code.</p>",
+    "image": "images/thiswebsite.png"
   }
 ]
 
