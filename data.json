@@ -25,7 +25,7 @@
     "name": "Chat App",
     "categories": ["App", "Solo"],
     "description":"<p>ChatMate is an advanced chat application built with React, designed to deliver a seamless and modern communication experience. This project focuses on providing real-time messaging, user authentication, and an intuitive user interface for effortless interaction.</p><p>Key Features:</p><p>Real-Time Messaging:</p><ul><li>Messages are delivered instantly and reliably.</li></ul><p>User Authentication:</p><ul><li>Created a secure authentication system to protect user data and ensure privacy.</li><li>Incorporated user registration and login functionalities.</li></ul><p>Responsive Design:</p><ul><li>Designed a fully responsive interface to provide a consistent user experience across all devices, including desktops, tablets, and smartphones.</li></ul><p>Group Chats and Media Sharing:</p><ul><li>Enabled users to create and manage group chats, fostering collaboration and social interaction.</li><li>Added media sharing capabilities, allowing users to send photos, videos, and files within chats.</li></ul>",
-    "image": "images/chatApp.png"
+    "image": "images/ChatApp.png"
   },
   {
     "id": 5,
