@@ -168,8 +168,8 @@ footer {
   color: var(--color-1);
   z-index: 1;
   padding: 0px 20px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  /* -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; */
 }
 
 footer > .bottom {
