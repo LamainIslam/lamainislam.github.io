@@ -4,6 +4,9 @@ body{
   font-family: 'Outfit', sans-serif;
   background-color: var(--color-3);
 }
+*{
+  color: #202020;
+}
 h1{
   font-family: 'Panchang', sans-serif;
   font-weight: 700;
