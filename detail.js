@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
 
         if (!itemId) {
-            itemDetail.innerHTML = '<p>Select an item from the list above</p>';
+            itemDetail.innerHTML = '<p>Select an item from the list</p>';
             return;
         }
 
@@ -43,7 +43,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (item) {
             itemDetail.innerHTML = `
                 <img class="main-image" src="${item.image}" alt="Image of ${item.name}">
+                <div class="title-holder">
                 <h1>${item.name}</h1>
+                <h1 class="outline">${item.name}</h1>
+                </div>
                 <p>Categories: ${item.categories.join(', ')}</p>
                 <div>${item.description}</div>
             `;
