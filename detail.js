@@ -47,15 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 <p>Categories: ${item.categories.join(', ')}</p>
                 <div>${item.description}</div>
             `;
-
-            // Center the selected item
-            const activeItem = document.querySelector('.item-link.current').parentElement;
-            const containerWidth = itemList.clientWidth;
-            const itemOffsetLeft = activeItem.offsetLeft;
-            const itemWidth = activeItem.clientWidth;
-
-            const scrollPosition = itemOffsetLeft - (containerWidth / 2) + (itemWidth / 2);
-            itemList.parentElement.scrollLeft = scrollPosition;
+            
         } else {
             itemDetail.innerHTML = '<p>Item not found</p>';
         }
