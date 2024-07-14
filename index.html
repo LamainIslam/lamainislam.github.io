@@ -9,7 +9,53 @@
     <link href="https://api.fontshare.com/v2/css?f[]=panchang@200,300,400,500,600,700,800,1&f[]=outfit@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <div class="nav">
+        <div class="holder">
+            <a href="">
+                <h1 class="name">
+                    <span class="name-1">Lamain Islam</span>
+                    <span class="name-2">
+                        Lamain Islam
+                        <span>
+                            <svg class="other-svg" width="30" height="21" viewBox="0 0 63 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="50" width="15" height="64.8449" transform="rotate(45 48.4258 0)" fill="#FF4400"/>
+                                <rect x="48" width="15" height="60" fill="#FF4400"/>
+                                <rect y="20" x="4" width="15" height="60" transform="rotate(-90 0 20)" fill="#FF4400"/>
+                            </svg>
+                        </span>
+                    </span>
+                </h1>
+            </a>
+        <!-- <div class="time">20:21:17</div> -->
+            <div class="menu">
+                <a>
+                    <span class="menu-item-1">About Me</span>
+                    <span class="menu-item-2">About Me</span>
+                </a>
+                <a href="#work">
+                    <span class="menu-item-1">Explore my Work</span>
+                    <span class="menu-item-2">Explore my Work</span>
+                </a>
+                <a>
+                    <span class="menu-item-1">Get in Touch</span>
+                    <span class="menu-item-2">Get in Touch</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="landing-page">
+        <div class="hero">
+            to be decided 
+        </div>
+    </div>
+    <div class="about">
+        <p>About me</p>
+        <h4 class="reveal-type">
+            Enthusiastic Computer Science student at Queen Mary University of London with proficiency in Python, JavaScript, C#, Java, CSS, and HTML. Committed to ongoing learning and quick adaptation to emerging technologies.
+        </h4>
+    </div>
+
+    <div id="work" class="container">
         <div class="search-and-filter">
             <div class="search">
                 <svg class="search-icon" width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -104,5 +150,48 @@
         </div>
     </footer>
     <script src="script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger)
+
+            const splitTypes = document.querySelectorAll('.reveal-type')
+
+            splitTypes.forEach((char, i) => {
+                const text = new SplitType(char, { types: 'chars' })
+
+                gsap.from(text.chars,  {
+                    scrollTrigger: {
+                        trigger: char,
+                        start: 'top 80%',
+                        end: 'top 20%',
+                        scrub: true,
+                    },
+                    opacity: 0.2,
+                    stagger: 0.1
+                })
+            })
+        })
+
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+       
+    </script>
 </body>
 </html>
