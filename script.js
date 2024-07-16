@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryDropdown = document.getElementById('categoryDropdown');
     const itemList = document.getElementById('itemList');
     const loader = document.getElementById('loader');
-    const aboutParagraph = document.getElementById('aboutParagraph');
-    const footer = document.getElementById('footer');
 
     let data = [];
     let categories = [];
@@ -92,9 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loader.style.display = 'none';
     }
 
-    aboutParagraph.addEventListener('click', () => {
-        footer.classList.toggle('active');
-    });
-
     fetchData();
+
 });
