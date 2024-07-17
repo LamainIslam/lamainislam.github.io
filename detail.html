@@ -10,8 +10,7 @@
     <link href="https://api.fontshare.com/v2/css?f[]=panchang@200,300,400,500,600,700,800,1&f[]=outfit@100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        
+    <div class="container">   
         <div id="itemDetail"></div>
         <a href="index.html">
             <svg width="92" height="92" viewBox="0 0 92 92" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,9 +21,43 @@
             </svg>
         </a>
         <div class="item-list" id="itemList">
-            <h2 class="other-work">Other Work:</h2>
+            <p class="other-work">Next:</p>
         </div>
     </div>
+
+    <footer id="footer" class="">
+        <p>©2024 Lamain Islam All Rights Reserved</p>
+        <p>Designed by Lamain Islam</p>
+    </footer>
+
+
     <script src="detail.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    
+    <script>
+        //h1 animation on page lode
+        document.addEventListener("DOMContentLoaded", (event) => {
+            
+        })
+
+        const lenis = new Lenis()
+
+        lenis.on('scroll', (e) => {
+        console.log(e)
+        })
+
+        lenis.on('scroll', ScrollTrigger.update)
+
+        gsap.ticker.add((time)=>{
+        lenis.raf(time * 1000)
+        })
+
+        gsap.ticker.lagSmoothing(0)
+       
+    </script>
 </body>
 </html>

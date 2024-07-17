@@ -36,6 +36,13 @@
   },
   {
     "id": 6,
+    "name": "Recipe App",
+    "categories": ["Website", "Solo"],
+    "description": "<h2>Under Construction</h2>",
+    "image": "images/thiswebsite.png"
+  },
+  {
+    "id": 70,
     "name": "This Website",
     "categories": ["Website", "Solo"],
     "description": "<p>This is my personal website.</p><p>This website was designed using Figma. Developed using HTML, CSS, and JavaScript in Visual Studio Code.</p>",
