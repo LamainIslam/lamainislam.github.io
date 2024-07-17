@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const categoryDropdown = document.getElementById('categoryDropdown');
     const itemList = document.getElementById('itemList');
     const loader = document.getElementById('loader');
+    const hamburger = document.querySelector('.hamburger');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
 
     let data = [];
     let categories = [];
@@ -92,4 +94,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchData();
 
+    // Hamburger menu toggle
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        hamburgerMenu.classList.toggle('active');
+        console.log('clicked');
+    });
 });
