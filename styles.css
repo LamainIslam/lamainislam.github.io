@@ -31,6 +31,10 @@ html.lenis, html.lenis body {
 
 html, body {
   scroll-behavior: smooth;
+  max-width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -397,6 +401,10 @@ footer {
   }
 }
 
+.scroll{
+  animation: 2.1s ease-out 0s 1 scrollIndecatorAnimation, bob 1.9s ease-in-out infinite;
+}
+
 @keyframes bob {
   0% {
     transform: translateY(0px) rotate(90deg);
@@ -408,14 +416,22 @@ footer {
     transform: translateY(0px) rotate(90deg);
   }
 }
+@keyframes scrollIndecatorAnimation {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 
 .item-container, .search-and-filter, .contact-holder>a{
   animation: inFromTheLeft both;
   animation-timeline: view(90% 0%);
 }
 .mini-title{
-  animation: inFromTheLeft both;
-  animation-timeline: view(90% 1%);
+  animation: fadeIn both;
+  animation-timeline: view(70% 10%);
 }
 footer>*{
   animation: inFromTheLeft both;
@@ -426,6 +442,18 @@ footer>*{
   animation-timeline: view(99% 1%);
 }
 
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  75%{
+    opacity: 0.3;
+  }
+  100%{
+    opacity: 1;
+  }
+}
 @keyframes inFromTheLeft {
   from{
     /* opacity: 0;
@@ -447,6 +475,11 @@ footer>*{
 
 .nav{
   overflow: hidden;
+}
+
+.menu-btn{
+  height: 14px;
+  padding: 10px 2px;
 }
 
 .hamburger {
@@ -482,7 +515,7 @@ footer>*{
 }
 
 /* Tablets and below */
-@media (max-width: 1080px) {
+@media screen and (max-width: 1080px) {
   body {
     overflow-x: hidden;
     max-width: 1080px;
@@ -507,7 +540,7 @@ footer>*{
 }
 
 /* Large mobile phones and below */
-@media (max-width: 720px) {
+@media screen and (max-width: 720px) {
   body {
     overflow-x: hidden;
     max-width: 720px;
@@ -546,63 +579,7 @@ footer>*{
   .menu > a {
     text-align: right;
   }
-}
-
-@media (max-width: 480px) {
-  body {
-    overflow-x: hidden;
-    max-width: 480px;
-  }
-  .name{ height: 26px; }
-  .name:hover .name-1 {
-    transform: translateY(-26px);
-  }
-  .name:hover .name-2 {
-    transform: translateY(-26px);
-  }
-  .hero > h1 {
-    font-size: 40px;
-  }
-  .barcode {
-    font-size: 30px;
-    left: -30px;
-  }
-  #about > h4 {
-    font-size: 30px;
-  }
-  #about {
-    padding-bottom: 200px;
-  }
-  .name > span {
-    font-size: 20px;
-  }
-  .menu > a {
-    font-size: 20px;
-  }
-  #itemList > div > li {
-    font-size: 80px;
-  }
-  .menu {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-  }
-
-  .menu.active {
-    display: flex !important;
-    flex-direction: column;
-    position: fixed;
-    right: 15px;
-    top: 70px;
-    z-index: 1;
-  }
-  .menu > a {
-    text-align: right;
-  }
-}
-
-@media (max-width: 768px) {
+  
   #searchBar, #categoryDropdown {
     font-size: 18px;
   }
@@ -631,6 +608,75 @@ footer>*{
 }
 
 @media (max-width: 480px) {
+  body{
+    overflow-x: hidden;
+    max-width: 480px;
+  }
+  .name{ height: 26px; }
+  .name:hover .name-1 {
+    transform: translateY(-26px);
+  }
+  .name:hover .name-2 {
+    transform: translateY(-26px);
+  }
+  .hero > h1 {
+    font-size: 40px;
+  }
+  .barcode {
+    font-size: 30px;
+    left: -30px;
+  }
+  #about > h4 {
+    font-size: 30px;
+  }
+  #about {
+    padding-bottom: 200px;
+  }
+  .name > span {
+    font-size: 20px;
+  }
+  .menu > a {
+    font-size: 20px;
+    height: 25px;
+  }
+  #itemList > div > li {
+    font-size: 80px;
+  }
+  .menu {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    height: 3px;
+    width: 25px;
+  }
+  .hamburger:after{
+    height: 3px;
+    width: 20px;
+    position: relative;
+    top: 10px;
+  }
+
+  .hamburger.active{
+    width: 22px;
+  }
+
+  .hamburger.active:after{
+    width: 22px;
+  }
+
+  .menu.active {
+    display: flex !important;
+    flex-direction: column;
+    position: fixed;
+    right: 15px;
+    top: 70px;
+    z-index: 1;
+  }
+  .menu > a {
+    text-align: right;
+  }  
+  
   #searchBar, #categoryDropdown {
     font-size: 16px;
   }

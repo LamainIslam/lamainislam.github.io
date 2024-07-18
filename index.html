@@ -26,7 +26,9 @@
                     </span>
                 </h1>
             </a>
-            <div class="hamburger"></div>
+            <div class="menu-btn">
+                <div class="hamburger"></div>
+            </div>
             <div class="menu hamburger-menu">
                 <a href="#about">
                     <span class="menu-item-1">About Me</span>
@@ -153,17 +155,6 @@
                     stagger: 0.1
                 })
             })
-            
-            const listItem = document.querySelector(".item-container")
-            gsap.to('.item-container', {
-                x: 100, 
-                scrollTrigger: {
-                    trigger: 'h1',
-                    start: 'top bottom',
-                    end: 'center center',
-                    scrub: true
-                }
-            });
         })
 
         const lenis = new Lenis()
