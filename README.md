@@ -6,7 +6,6 @@ Welcome to the repository for Lamain Islam's personal website. This project cont
 
 - [About](#about)
 - [Features](#features)
-- [License](#license)
 - [Contact](#contact)
 
 ## About
@@ -19,10 +18,6 @@ This repository hosts the code for Lamain Islam's personal website, which showca
 - **Project Showcase:** Displays a portfolio of projects.
 - **Contact Form:** Allows visitors to get in touch.
 - **Simple Navigation:** Easy-to-use navigation throughout the site.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
