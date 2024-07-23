@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     <h1 class="title">${item.name}</h1>
                     <h1 class="title outline">${item.name}</h1>
                 </div>
-                <p>Categories: ${item.categories.join(', ')}</p>
-                <div>${item.description}</div>
+                <p class="categories">Categories: ${item.categories.join(', ')}</p>
+                <div class="description">${item.description}</div>
             `;
         } else {
             itemDetail.innerHTML = '<p>Item not found</p>';

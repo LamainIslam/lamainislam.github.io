@@ -7,6 +7,17 @@
   --color-3: #6adbbc;
   --color-4: #202020b3;
   --color-5: #eee;
+  --color-6: #9191E9;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: #fff;
+  background: var(--color-6);
+}
+
+::selection {
+  color: #ffffff;
+  background: var(--color-6);
 }
 
 html.lenis, html.lenis body {
@@ -311,6 +322,12 @@ circle {
   text-align: center;
   margin-top: 20px;
 }
+
+#skills{
+  padding: 300px 20px;
+}
+
+
 
 footer {
   display: flex;

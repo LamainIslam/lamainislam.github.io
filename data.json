@@ -42,7 +42,7 @@
     "image": "images/thiswebsite.png"
   },
   {
-    "id": 70,
+    "id": 7,
     "name": "This Website",
     "categories": ["Website", "Solo"],
     "description": "<p>This is my personal website.</p><p>This website was designed using Figma. Developed using HTML, CSS, and JavaScript in Visual Studio Code.</p>",
