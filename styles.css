@@ -2,22 +2,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
 
 :root {
-  --color-1: #202020;
-  --color-2: #2020207a;
-  --color-3: #6adbbc;
-  --color-4: #202020b3;
-  --color-5: #eee;
-  --color-6: #9191E9;
+  --color-1: #9191E9;
+  --color-2: #9191E97a;
+  --color-3: #eeeeee;
+  --color-4: #9191E9b3;
+  --color-5: #202020;
+  --color-6: #6adbbc;
 }
 
 ::-moz-selection { /* Code for Firefox */
-  color: #fff;
+  color: var(--color-5);
   background: var(--color-6);
 }
 
 ::selection {
-  color: #ffffff;
+  color: var(--color-5);
   background: var(--color-6);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(182, 182, 182); 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(79, 79, 79); 
+  /* border-radius: 10px; */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(46, 46, 46); 
 }
 
 html.lenis, html.lenis body {
@@ -324,7 +345,7 @@ circle {
 }
 
 #skills{
-  padding: 300px 20px;
+  padding: 200px 20px;
 }
 
 
@@ -375,115 +396,134 @@ footer {
   transform: translateY(0);
 }
 
-.nav{
-  animation: 1s ease-out 0s 1 dropDownFromTheTop;
-}
+@media (prefers-reduced-motion: no-preference) {
 
-@keyframes dropDownFromTheTop {
-  0% {
-    transform: translateY(-100%);
+  .nav{
+    animation: 1s ease-out 0s 1 dropDownFromTheTop;
   }
-  100% {
-    transform: translateY(0);
-  }
-}
 
-.hero{  
-  animation: 1s ease-out 0s 1 slideInFromLeft;
-}
+  @keyframes dropDownFromTheTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-100%);
+  .hero{  
+    animation: 1s ease-out 0s 1 slideInFromLeft;
   }
-  100% {
-    transform: translateX(0);
-  }
-}
 
-.barcode{
-  animation: 1s ease-out 0s 1 barcodeAnimation;
-}
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
-@keyframes barcodeAnimation {
-  0% {
-    transform: rotate(-90deg) translateY(-100%);
+  .barcode{
+    animation: 1s ease-out 0s 1 barcodeAnimation;
   }
-  100% {
-    transform: rotate(-90deg) translateY(0);
-  }
-}
 
-.scroll{
-  animation: 2.1s ease-out 0s 1 scrollIndecatorAnimation, bob 1.9s ease-in-out infinite;
-}
+  @keyframes barcodeAnimation {
+    0% {
+      transform: rotate(-90deg) translateY(-100%);
+    }
+    100% {
+      transform: rotate(-90deg) translateY(0);
+    }
+  }
 
-@keyframes bob {
-  0% {
-    transform: translateY(0px) rotate(90deg);
+  .scroll{
+    animation: 2.1s ease-out 0s 1 scrollIndecatorAnimation, bob 1.9s ease-in-out infinite;
   }
-  50% {
-    transform: translateY(10px) rotate(90deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(90deg);
-  }
-}
-@keyframes scrollIndecatorAnimation {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
 
-.item-container, .search-and-filter, .contact-holder>a{
-  animation: inFromTheLeft both;
-  animation-timeline: view(90% 0%);
-}
-.mini-title{
-  animation: fadeIn both;
-  animation-timeline: view(70% 10%);
-}
-footer>*{
-  animation: inFromTheLeft both;
-  animation-timeline: view(99% 0%);
-}
-.footer-right{
-  animation: inFromTheRight both;
-  animation-timeline: view(99% 1%);
-}
+  @keyframes bob {
+    0% {
+      transform: translateY(0px) rotate(90deg);
+    }
+    50% {
+      transform: translateY(10px) rotate(90deg);
+    }
+    100% {
+      transform: translateY(0px) rotate(90deg);
+    }
+  }
+  @keyframes scrollIndecatorAnimation {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+  .item-container{
+    animation: inFromTheBottom both;
+    animation-timeline: view(80% 5%);
+  } 
+  .search-and-filter, .contact-holder>a{
+    animation: inFromTheLeft both;
+    animation-timeline: view(90% 0%);
+  }
+  .mini-title{
+    animation: fadeIn both;
+    animation-timeline: view(70% 10%);
+  }
+  footer>*{
+    animation: inFromTheLeft both;
+    animation-timeline: view(99% 0%);
+  }
+  .footer-right{
+    animation: inFromTheRight both;
+    animation-timeline: view(99% 1%);
+  }
 
 
-@keyframes fadeIn {
-  0%{
-    opacity: 0;
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    75%{
+      opacity: 0.3;
+    }
+    100%{
+      opacity: 1;
+    }
   }
-  75%{
-    opacity: 0.3;
-  }
-  100%{
-    opacity: 1;
-  }
-}
-@keyframes inFromTheLeft {
-  from{
-    /* opacity: 0;
-    -webkit-filter: blur(5px);
-            filter: blur(5px); */
-    transform: translateX(-300px)
-               ;
 
+  @keyframes inFromTheBottom {
+    from{
+      transform: translateY(300px);
+      -webkit-filter: blur(5px);
+              filter: blur(5px);
+    }
+    to{
+      transform: translateY(0px);
+    }
   }
-}
-@keyframes inFromTheRight {
-  from{
-    transform: translateX(300px);
+  @keyframes inFromTheLeft {
+    from{
+      /* opacity: 0;
+      -webkit-filter: blur(5px);
+              filter: blur(5px); */
+      transform: translateX(-300px)
+                ;
+
+    }
   }
-  to{
-    transform: translateX(0px);
+  @keyframes inFromTheRight {
+    from{
+      transform: translateX(300px);
+    }
+    to{
+      transform: translateX(0px);
+    }
   }
+
 }
 
 .nav{

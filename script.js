@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             li2.className = 'item-front';
             li2.addEventListener('click', () => {
                 window.location.href = `detail.html?id=${item.id}`;
-            }); 
+            });
 
             parentDiv.appendChild(li1);
             parentDiv.appendChild(li2);

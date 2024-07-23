@@ -1,15 +1,21 @@
+:root{
+  --color-101: var(--color-5);
+  --color-102: var(--color-1);
+  --color-103: var(--color-4);
+  --color-104: var(--color-3);
+}
 body {
   max-width: 1040px;
   margin: 0 auto;
   font-family: 'Outfit', sans-serif;
-  background-color: var(--color-5);
+  background-color: var(--color-104);
 }
 * {
-  color: var(--color-1);
+  color: var(--color-101);
   z-index: 1;
 }
 a{
-  color: var(--color-1);
+  color: var(--color-101);
 }
 h1 {
   font-family: 'Panchang', sans-serif;
@@ -18,7 +24,7 @@ h1 {
   margin-top: 0px;
   margin-bottom: 5px;
   border-radius: 4px;
-  color: var(--color-6);
+  color: var(--color-102);
   grid-row-start: 1;
   grid-column-start: 1;
 }
@@ -30,12 +36,12 @@ h1 {
 .outline{
   color: #00000000;
   -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: var(--color-6);
+  -webkit-text-stroke-color: var(--color-102);
   z-index: 100;
   grid-row-start: 1;
 }
 h2{
-  color: var(--color-1);
+  color: var(--color-101);
 }
 p {
   font-family: 'Outfit', sans-serif;
@@ -65,10 +71,10 @@ a > svg:hover {
   left: 20px;
 }
 rect {
-  fill: var(--color-1);
+  fill: var(--color-101);
 }
 circle {
-  stroke: var(--color-1);
+  stroke: var(--color-101);
 }
 
 .next{ 
@@ -76,7 +82,7 @@ circle {
   margin: 0; 
   align-self: end;
   font-size: 24px;
-  color: var(--color-2);
+  color: var(--color-103);
 }
 .item-list-container {
   display: inline-block;
@@ -111,11 +117,11 @@ circle {
 }
 .item-link.first {
   transform: translateY(0);
-  color: var(--color-6);
+  color: var(--color-102);
 }
 .item-link.second {
   transform: translateY(100%);
-  color: var(--color-6);
+  color: var(--color-102);
 }
 .item-container:hover .item-link.first {
   transform: translateY(-100%);
