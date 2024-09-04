@@ -11,71 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
     let selectedCategory = '';
     let searchQuery = '';
 
-    // Define color themes
-    const colorThemes = [
-        {
-            '--color-1': '#9191E9;',
-            '--color-2': '#9191E97a;',
-            '--color-3': '#eeeeee;',
-            '--color-4': '#9191E9b3;',
-            '--color-5': '#202020;',
-            '--color-6': '#6adbbc;',
-        },
-        {
-            '--color-1': '#ff6f61',
-            '--color-2': '#ff6f617a',
-            '--color-3': '#f2f2f2',
-            '--color-4': '#ff6f61b3',
-            '--color-5': '#333333',
-            '--color-6': '#79c7c5',
-        },
-        {
-            '--color-1': '#4682b4',
-            '--color-2': '#4682b47a',
-            '--color-3': '#fafafa',
-            '--color-4': '#4682b4b3',
-            '--color-5': '#2c2c2c',
-            '--color-6': '#f08080',
-        },{
-            '--color-1': '#29c276',
-            '--color-2': '#29c2767a',     
-            '--color-3': '#efefef',       
-            '--color-4': '#29c276b3',     
-            '--color-5': '#202020',       
-            '--color-6': '#c22929',       
-        },
-        {
-            '--color-1': '#c22929',
-            '--color-2': '#c229297a',     
-            '--color-3': '#ffffff',       
-            '--color-4': '#c22929b3',     
-            '--color-5': '#202020',       
-            '--color-6': '#29c276',       
-        },
-        {
-            '--color-1': '#2966c2',
-            '--color-2': '#2966c27a',     
-            '--color-3': '#f2f2f2',       
-            '--color-4': '#2966c2b3',     
-            '--color-5': '#202020',       
-            '--color-6': '#ff4400',       
-        },
-    ];
+    // // Define color themes
+    // const colorThemes = [
+    //     {
+    //         '--color-1': '#9ca0bc;',
+    //         '--color-2': '#9ca0bc7a;',
+    //         '--color-3': '#252733;',
+    //         '--color-4': '#9ca0bcb3;',
+    //         '--color-5': '#202020;',
+    //         '--color-6': '#6adbbc;',
+    //     }
+    // ];
 
     // Predefined categories
     const predefinedCategories = ["App", "Website", "Solo", "Group", "Others"];
 
-    // Function to apply a theme
-    const applyTheme = (theme) => {
-        const root = document.documentElement;
-        for (const [key, value] of Object.entries(theme)) {
-            root.style.setProperty(key, value);
-        }
-    };
+    // // Function to apply a theme
+    // const applyTheme = (theme) => {
+    //     const root = document.documentElement;
+    //     for (const [key, value] of Object.entries(theme)) {
+    //         root.style.setProperty(key, value);
+    //     }
+    // };
 
-    // Randomly select a theme and apply it
-    const randomTheme = colorThemes[Math.floor(Math.random() * colorThemes.length)];
-    applyTheme(randomTheme);
+    // // Randomly select a theme and apply it
+    // const randomTheme = colorThemes[Math.floor(Math.random() * colorThemes.length)];
+    // applyTheme(randomTheme);
 
     async function fetchData() {
         showLoader();
@@ -164,4 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.classList.toggle('active');
         hamburgerMenu.classList.toggle('active');
     });
+
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
 });

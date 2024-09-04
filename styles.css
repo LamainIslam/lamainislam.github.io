@@ -2,22 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+128&display=swap');
 
 :root {
-  --color-1: #9191E9;
-  --color-2: #9191E97a;
-  --color-3: #eeeeee;
-  --color-4: #9191E9b3;
-  --color-5: #202020;
-  --color-6: #6adbbc;
+  --color-1: #a3a7c0;
+  --color-2: #a3a7c07a;
+  --color-3: #252733;
+  --color-4: #a3a7c0b3;
+  --color-5: #d8ddfc;
 }
 
 ::-moz-selection { /* Code for Firefox */
   color: var(--color-5);
-  background: var(--color-6);
+  background: var(--color-3);
 }
 
 ::selection {
-  color: var(--color-5);
-  background: var(--color-6);
+  color: var(--color-3);
+  background: var(--color-1);
 }
 
 /* width */
@@ -27,12 +26,12 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #ddd; 
+  background: #a3a7c01a; 
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(79, 79, 79); 
+  background: #a3a7c07a; 
   /* border-radius: 10px; */
 }
 
@@ -76,6 +75,13 @@ body {
   max-width: 1920px;
 }
 
+/* .background{
+  opacity: 0.5;
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+} */
+
 a {
   text-decoration: none;
   color: var(--color-1);
@@ -95,7 +101,7 @@ circle {
   display: flex;
   justify-content: center;
   z-index: 10;
-  background-color: var(--color-3);
+  background-color: #00000000;
 }
 
 .holder {
@@ -225,7 +231,7 @@ circle {
 .search-and-filter {
   padding-top: 24px;
   top: 0;
-  background-color: var(--color-3);
+  background-color: #00000000;
   z-index: 1;
 }
 
@@ -399,21 +405,61 @@ footer {
 
 @media (prefers-reduced-motion: no-preference) {
 
-  .nav{
+  .name, .menu-btn{
     animation: 1s ease-out 0s 1 dropDownFromTheTop;
   }
+  .menu a:nth-child(1){
+    animation: 0.5s ease-out 0s 1 dropDownFromTheTop;
+  }
+  .menu a:nth-child(2){
+    animation: 1s ease-out 0s 1 dropDownFromTheTop1;
+  }
+  .menu a:nth-child(3){
+    animation: 1.5s ease-out 0s 1 dropDownFromTheTop2;
+  }
+
 
   @keyframes dropDownFromTheTop {
     0% {
       transform: translateY(-100%);
+      opacity: 0;
     }
     100% {
       transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes dropDownFromTheTop1 {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    33.33% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes dropDownFromTheTop2 {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    66.66% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 
   .hero{  
-    animation: 1s ease-out 0s 1 slideInFromLeft;
+    animation: 1.5s ease-out 0s 1 slideInFromLeft;
   }
 
   @keyframes slideInFromLeft {

@@ -31,7 +31,26 @@ h1 {
   grid-row-start: 1;
   grid-column-start: 1;
 }
+
 .title-holder{
+  position: absolute;
+  top:50%;
+  left:0;
+  display: flex;
+  white-space: nowrap;
+  width: 100%;
+  
+}
+
+.left-scroller{
+  top: calc(50% - 172px);
+}
+
+.title{
+  display: inline-block;
+  padding: 0 2rem; 
+}
+/* .title-holder{
   display: grid;
   grid-template-row: 1fr;
   grid-template-columns: 1fr;
@@ -42,7 +61,7 @@ h1 {
   -webkit-text-stroke-color: var(--color-102);
   z-index: 100;
   grid-row-start: 1;
-}
+} */
 h2{
   color: var(--color-101);
 }
@@ -60,24 +79,99 @@ img {
 .main-image{
   z-index: 2 !important; 
 }
-a > svg {
+.return-home{
+  width: 50px;
+  z-index: 100;
+}
+.return-home > svg {
   width: 50px;
   position: fixed;
   top: 22px;
   left: 22px;
   transition: left 0.1s ease-in-out;
-  z-index: 20;
 }
-a > svg:hover {
+.return-home > svg:hover {
   left: 20px;
 }
 rect {
   fill: var(--color-101);
 }
 circle {
-  stroke: var(--color-101);
+  stroke: #0000;
 }
 
+.img-holder{
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  display: block;
+}
+
+.no-images{
+  height: 90vh;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.single-image {
+  height: 90vh;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.carousel {
+  margin: auto;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel-controls {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.carousel-controls button {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carousel-controls button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.category-item{
+  background-color: var(--color-101);
+  color: var(--color-104);
+  border-radius: 50px;
+  padding: 5px 11px;
+  margin-left: 10px;
+}
 
 .item-list {
   display: flex;
@@ -130,8 +224,7 @@ footer{
 }
 
 @media (prefers-reduced-motion: no-preference) {
-
-  .title, .main-image{
+  .main-image{
     animation: 1s ease-out 0s 1 dropDownFromTheTop;
   }
 
@@ -142,6 +235,56 @@ footer{
   .item-container{
     animation: inFromTheLeft both;
     animation-timeline: view(90% 0%);
+  }
+
+  .title{
+    animation: scroll-right-infinite both;
+    animation-timeline: view(0% 0%);
+    /* animation: scroll-right-infinitex 2.5s ease-out 1
+              ,scroll-right-infinite 15s 2.5s linear infinite;  */
+  }
+  
+  .left-scroller > .title {
+    animation: scroll-left-infinite both;
+    animation-timeline: view(0% 0%);
+    /* animation: scroll-left-infinitex 2.5s ease-out 1
+              ,scroll-left-infinite 15s 2.5s linear infinite;  */
+  }
+  
+  @keyframes scroll-right-infinitex {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-400%);
+    }
+  }
+  
+  @keyframes scroll-left-infinitex {
+    0% {
+        transform: translateX(-400%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+  }
+  
+  @keyframes scroll-right-infinite {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-200%);
+    }
+  }
+  
+  @keyframes scroll-left-infinite {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
   }
 
   /* .title-holder{
