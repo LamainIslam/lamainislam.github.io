@@ -302,7 +302,7 @@ circle {
   padding: 0;
 }
 
-#itemList > div > li {
+#itemList > a > li {
   font-family: 'Panchang', sans-serif;
   font-weight: 700;
   font-size: 110px;
